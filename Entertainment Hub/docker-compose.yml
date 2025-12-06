@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5001"
+    environment:
+      PORT: 5001
+      MONGO_URI: mongodb://mongodb:27017/entertainment
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      OAUTH_CALLBACK: ${OAUTH_CALLBACK}
+      TMDB_API_KEY: ${TMDB_API_KEY}
+      SPOTIFY_CLIENT_ID: ${SPOTIFY_CLIENT_ID}
+      SPOTIFY_CLIENT_SECRET: ${SPOTIFY_CLIENT_SECRET}
+      RAWG_API_KEY: ${RAWG_API_KEY}
+      YOUTUBE_API_KEY: ${YOUTUBE_API_KEY}
+      NEWSAPI_KEY: ${NEWSAPI_KEY}
+      OPENWEATHER_KEY: ${OPENWEATHER_KEY}
+      API_KEY: ${API_KEY}
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

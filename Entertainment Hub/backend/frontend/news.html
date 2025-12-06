@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Entertainment News</title>
+  <link rel="stylesheet" href="news.css" />
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="brand" onclick="location.href='/news.html'" style="cursor:pointer;">
+        <h1>Entertainment <span>Hub</span></h1>
+        <p class="sub">News</p>
+      </div>
+
+      <div class="controls">
+        <div id="userBlock" class="user-block">
+          <img id="userAvatar" src="images/default-avatar.jpg" alt="Avatar" />
+          <span id="userName">Guest</span>
+        </div>
+
+        <button id="HomeBtn" class="btn" onclick="location.href='/'">Home</button>
+        <button id="loginBtn" class="btn">Login</button>
+      </div>
+    </header>
+
+    <!-- Location & Search -->
+    <div class="location-row">
+      <div id="countryInfo" class="country-info">
+        <img id="countryFlag" src="images/countries.png" alt="Flag" />
+        <div>
+          <div id="countryName">Detecting...</div>
+          <div id="countryCity" class="muted">—</div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="searchInput" placeholder="Search entertainment news..." />
+        <button id="searchBtn" class="btn primary">Search</button>
+      </div>
+    </div>
+
+    <!-- Topic Chips -->
+    <div class="topic-chips">
+      <button class="chip" data-tag="hollywood">Hollywood</button>
+      <button class="chip" data-tag="movies">Movies</button>
+      <button class="chip" data-tag="music">Music</button>
+      <button class="chip" data-tag="gaming">Gaming</button>
+      <button class="chip" data-tag="tv">TV Shows</button>
+    </div>
+
+    <!-- Section Heading -->
+    <div class="container">
+      <h2 class="section-title">Top Entertainment News</h2>
+      <div id="newsGrid" class="news-grid"></div>
+      <button id="loadMoreBtn" class="btn load-more">Load More</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="newsModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button class="close-btn" id="modalCloseBtn">×</button>
+      <img id="modalImage" class="modal-image" />
+      
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalAuthor"></p>
+        <p id="modalDate"></p>
+        <p id="modalDesc"></p>
+        <a id="modalLink" href="#" target="_blank" class="read-more-btn">Read Full Article</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="news.js"></script>
+</body>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Entertainment Hub</h3>
+      <p>Your one-stop destination for movies, music, news, and more. Stay tuned for the latest updates!</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="youtube.html">Youtube</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Entertainment Hub. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entertainment Hub - YouTube</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="youtube.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="brand" onclick="location.href='/youtube.html'" style="cursor:pointer;">
+        <h1>Entertainment <span>Hub</span></h1>
+        <p class="sub">YouTube</p>
+      </div>
+
+      <div class="controls">
+        <div id="userBlock" class="user-block">
+          <img id="userAvatar" src="images/default-avatar.jpg" alt="Avatar" />
+          <span id="userName">Guest</span>
+        </div>
+
+        <button id="HomeBtn" class="btn" onclick="location.href='/'">Home</button>
+        <button id="loginBtn" class="btn">Login with Google</button>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="left-col">
+        <div class="location-row">
+          <div id="countryInfo" class="country-info">
+            <img id="countryFlag" src="images/countries.png" alt="Flag" />
+            <div>
+              <div id="countryName">Detecting...</div>
+              <div id="countryCity" class="muted">—</div>
+            </div>
+          </div>
+
+          <div class="search">
+            <input id="searchInput" placeholder="Search YouTube videos..." />
+            <button id="searchBtn" class="btn primary">Search</button>
+          </div>
+        </div>
+
+        <div id="trendingList" class="yt-trending-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="youtube.js" type="module"></script>
+</body>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Entertainment Hub</h3>
+      <p>Your one-stop destination for movies, music, news, and more. Stay tuned for the latest updates!</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="youtube.html">Youtube</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Entertainment Hub. All Rights Reserved.</p>
+  </div>
+</footer>
+</html>
