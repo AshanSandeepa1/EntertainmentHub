@@ -31,14 +31,14 @@ function updateLoginBtn() {
 
 function redirectToLogin() {
   localStorage.removeItem("user_logged_out");
-  window.location.href = "http://localhost:5001/auth/google";
+  window.location.href = "/auth/google";
 }
 
 function logoutUser() {
   localStorage.setItem("user_logged_out", "true");
 
   // Optionally notify server to destroy session
-  fetch("http://localhost:5001/auth/logout", { credentials: "include" }).finally(() => {
+  fetch("/auth/logout", { credentials: "include" }).finally(() => {
     state.user = { id: "guest", displayName: "Guest", photo: "images/default-avatar.jpg", location: null };
     renderUser();
     updateLoginBtn();
@@ -56,7 +56,7 @@ themeToggle.addEventListener("click", () => {
 // ---------------- GET CURRENT LOGGED-IN USER ---------------- //
 async function getCurrentUser() {
   try {
-    const res = await fetch("http://localhost:5001/api/user", {
+    const res = await fetch("/api/user", {
       credentials: "include",
     });
     if (!res.ok) return null;
@@ -95,7 +95,7 @@ async function fetchLandingData() {
     renderUser();
 
     // ---------------- Landing Data ---------------- //
-    const res = await fetch("http://localhost:5001/api/aggregate?section=landing", {
+    const res = await fetch("/api/aggregate?section=landing", {
       headers: { "x-api-key": "supersecret123" },
       credentials: "include",
     });
