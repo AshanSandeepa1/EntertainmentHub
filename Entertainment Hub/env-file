@@ -1,0 +1,23 @@
+# Backend Port
+PORT=5001
+
+# MongoDB Connection
+MONGO_URI=mongodb://mongodb:27017/entertainment
+
+# Google OAuth 2.0
+GOOGLE_CLIENT_ID=38368028xxxxxxxgt3g49o8ghh37q02.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=GOCSPXxxxxxxxzCqk4647Dwwx2q9-n3r
+OAUTH_CALLBACK=http://localhost:5001/auth/google/callback
+
+# Public API Keys
+TMDB_API_KEY=dbd127a54xxxxxxxx6a651362c7a81
+SPOTIFY_CLIENT_ID=1f6056d4bxxxxxxx194c16ebde3d10dbb
+SPOTIFY_CLIENT_SECRET=88abxxxxxxxx3570d9bc0f921f
+SPOTIFY_REDIRECT_URI=http://localhost:3000/auth/spotify/callback
+YOUTUBE_API_KEY=AIzaSyDi-xxxxxxxxdqZXDwZuHWfQkzjY
+NEWS_API_KEY=7f9932173d5xxxxxxx22f888ca5b9
+OPENWEATHER_KEY=c4acd99e28dxxxx386e207034bc
+
+# Custom App API Key
+API_KEY=supersecret123
+SESSION_SECRET=supersecret123
