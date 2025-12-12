@@ -17,10 +17,12 @@ Docker installed
 Docker Compose plugin installed 
 (No need to install Node.js, npm, or MongoDB locally.)
 
+
 How to Run
 
-Start all containers
+Create .env file with the API keys as per the given template
 
+Start all containers
 From project root:
 docker compose up -d --build
 
